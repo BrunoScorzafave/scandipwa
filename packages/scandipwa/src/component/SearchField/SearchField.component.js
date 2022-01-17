@@ -14,8 +14,7 @@ import PropTypes from 'prop-types';
 import {
     createRef,
     lazy,
-    PureComponent,
-    Suspense
+    PureComponent
 } from 'react';
 
 import ClickOutside from 'Component/ClickOutside';
@@ -164,13 +163,11 @@ export class SearchField extends PureComponent {
                   aria-label={ __('Search') }
                 />
                 { this.renderSearchIcon() }
-                <Suspense fallback={ this.renderOverlayFallback() }>
-                    <SearchOverlay
-                      isHideOverlay={ !device.isMobile }
-                      clearSearch={ this.clearSearch }
-                      searchCriteria={ searchCriteria }
-                    />
-                </Suspense>
+                <SearchOverlay
+                  isHideOverlay={ !device.isMobile }
+                  clearSearch={ this.clearSearch }
+                  searchCriteria={ searchCriteria }
+                />
             </div>
         );
     }

@@ -131,13 +131,11 @@ export class ProductPage extends PureComponent {
         } = this.props;
 
         return (
-            <Suspense fallback={ <Loader /> } key={ key }>
-                <ProductInformation
-                  product={ { ...dataSource, parameters } }
-                  areDetailsLoaded={ areDetailsLoaded }
-                  key={ key }
-                />
-            </Suspense>
+            <ProductInformation
+              product={ { ...dataSource, parameters } }
+              areDetailsLoaded={ areDetailsLoaded }
+              key={ key }
+            />
         );
     }
 
@@ -148,13 +146,11 @@ export class ProductPage extends PureComponent {
         } = this.props;
 
         return (
-            <Suspense fallback={ <Loader /> } key={ key }>
-                <ProductAttributes
-                  product={ activeProduct }
-                  areDetailsLoaded={ areDetailsLoaded }
-                  key={ key }
-                />
-            </Suspense>
+            <ProductAttributes
+              product={ activeProduct }
+              areDetailsLoaded={ areDetailsLoaded }
+              key={ key }
+            />
         );
     }
 
@@ -165,13 +161,11 @@ export class ProductPage extends PureComponent {
         } = this.props;
 
         return (
-            <Suspense fallback={ <Loader /> } key={ key }>
-                <ProductReviews
-                  product={ dataSource }
-                  areDetailsLoaded={ areDetailsLoaded }
-                  key={ key }
-                />
-            </Suspense>
+            <ProductReviews
+              product={ dataSource }
+              areDetailsLoaded={ areDetailsLoaded }
+              key={ key }
+            />
         );
     }
 
